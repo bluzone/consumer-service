@@ -8,6 +8,13 @@
 
 ## Execution
 
+```
+git clone https://github.com/bluzone/consumer-service
+cd consumer-service/samples/java-consumer-client
+mvn clean install
+java -jar target/java-consumer-client-1.0-SNAPSHOT.java --API_URL=... --API_TOKEN=...
+```
+
 Compile and package a Spring-Boot executable jar file:
 
 ```
