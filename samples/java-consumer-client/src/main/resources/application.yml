@@ -1,0 +1,13 @@
+---
+logging:
+  level:
+    com.bluvision: 'DEBUG'
+    org.springframework: 'OFF'
+
+info:
+  version: 1.0
+  name:  Consumer Client
+
+client:
+  apiToken: ${API_TOKEN:abc123}
+  apiUrl: ${API_URL:ws://localhost:8080/portal/consumer/raw}
