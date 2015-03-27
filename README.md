@@ -22,3 +22,6 @@ This documentation assumes you have already registered for an account on the Blu
 1. Locate your API_TOKEN by logging into the portal and click on the "API Access" left-menu item.
 2. The API_TOKEN value is the Web API Access - Web API Token.
 3. The API_URL value is derived from the url of your portal.
+
+### BLE Scan Data JSON format
+Please see https://bluvision.atlassian.net/wiki/x/vQBz for details.
