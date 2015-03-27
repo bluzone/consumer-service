@@ -13,6 +13,9 @@ The Java based client is useful for demonstrating integration in a B2B scenario 
 
 This documentation assumes you have already registered for an account on the BluZone portal and have provisioned one or more BluFi devices.
 
+For in-depth documentation and Getting Started guides please visit the BluZone public documentation portal at https://bluvision.atlassian.net/wiki/x/AwBL
+
+
 ![Locate API Token in the Portal](https://raw.githubusercontent.com/bluzone/consumer-service/master/docs/images/portal-api-access-screen.png)
 
 
