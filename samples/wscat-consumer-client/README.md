@@ -9,5 +9,5 @@ Follow instructions here:  https://www.npmjs.com/package/wscat
 # Connecting
 
 ```
-wscat -H BZID:<your.api.token> -c ws://beta.bluzone.io/portal/consumer/raw
+wscat -H BZID:<your.api.token> -c wss://bluzone.io/portal/consumer/raw
 ```
