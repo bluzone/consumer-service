@@ -24,13 +24,13 @@ mvn clean install
 Run the executable jar:
 
 ```
-java -jar target/java-consumer-client-1.0-SNAPSHOT.jar --API_URL=<ws://bluzone.io/portal/consumer/raw> --API_TOKEN=<your.api.token>
+java -jar target/java-consumer-client-1.0-SNAPSHOT.jar --API_URL=<wss://bluzone.io/portal/consumer/raw> --API_TOKEN=<your.api.token>
 ```
 
 ### Execution from within Spring-Boot using Maven Spring-Boot Plugin:
 
 ```
-mvn spring-boot:run -DAPI_TOKEN=<your.api.token> -DAPI_URL=ws://bluzone.io/portal/consumer/raw
+mvn spring-boot:run -DAPI_TOKEN=<your.api.token> -DAPI_URL=wss://bluzone.io/portal/consumer/raw
 ```
 
 Alterntaviely, edit the src/main/resources/application.yml and hard code the values.  Assuming hard coded values, simply run:
