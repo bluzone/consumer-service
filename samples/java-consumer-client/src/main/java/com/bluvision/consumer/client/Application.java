@@ -6,15 +6,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 
 import javax.websocket.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Consumer Client application context entry point.
@@ -22,6 +21,7 @@ import java.util.Map;
  * @author dare (robert@bluvision.com)
  * @since 1.0
  */
+@EnableScheduling
 @SpringBootApplication
 public class Application implements CommandLineRunner {
 
@@ -72,6 +72,20 @@ public class Application implements CommandLineRunner {
 			} while (!input.equals("exit"));
 		} catch (IOException e) {
 			log.error("IOException:", e);
+		}
+	}
+
+	/**
+	 * Send a keep alive ping to the remote server every 2 minutes
+	 */
+	@Scheduled(fixedDelay = 10000, initialDelay = 10000)
+	public void keepAlive() {
+		if (this.session != null) {
+			try {
+				this.session.getBasicRemote().sendText("ping");
+			} catch (Exception e) {
+				log.debug("Failed to PING server:", e);
+			}
 		}
 	}
 
