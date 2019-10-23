@@ -1,3 +1,8 @@
+# NOTICE
+Support for WebSocket connections to Bluzone has been DEPRECATED. 
+
+Please use the Bluzone Console UI to configure connectors to AWS Kinesis/S3 or Azure EventHub/BlobStorage instead.
+
 # Consumer Service
 
 The Consumer Service exposes streams of BLE scan data to the end user.  This project provdies a sample client for connecting to the BluZone Cloud and accessing this Stream.
